@@ -22,7 +22,7 @@ router.get("/get-all-todos", (req, res) =>{
 router.get("/get-todo-by-id/:id", (req, res) =>{
     const foundId = todos.findIndex(item => item.id === req.params.id);
     if(foundId > -1){
-        res.json(todos[foundId]);
+        res.json({foundTodo : todos[foundId]});
     }else{
         res.json({message: "The Todo ID you are looking for does not exists, please check ID"})
     }
@@ -43,7 +43,7 @@ router.post("/create-new-todo/:todo", (req, res) =>{
         done : false
     }
     todos.push(newTodo);
-    res.json(todos);
+    res.json({todos});
 })
 
 module.exports = router;
