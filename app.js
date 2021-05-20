@@ -16,8 +16,8 @@ const todoRouter = require("./routes/todoRouter");
 app.use("/", indexRouter);
 app.use("/api/todo", todoRouter);
 
-app.listen("3000", () =>{
-    console.log("Server started on port 3000");
-})
+// app.listen("3000", () =>{
+//     console.log("Server started on port 3000");
+// })
 
-//module.exports = app;
+module.exports = app;
